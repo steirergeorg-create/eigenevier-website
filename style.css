@@ -49,31 +49,38 @@ a:hover {
 }
 
 .sidebar-logo .bautraeger {
-  font-size: 11px;
-  color: var(--gray-light);
-  letter-spacing: 0.05em;
-  margin-bottom: 4px;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  color: #b0b0a8;
+  letter-spacing: 0.12em;
+  margin-bottom: 3px;
 }
 
 .logo-text {
   font-family: 'Raleway', Arial, sans-serif;
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 34px;
+  font-weight: 200;
   line-height: 1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
 }
-/* e·i·g·e·n·e·v·i·e·r */
-.logo-text .c1  { color: #7a7a6a; }   /* e  – olive-gray */
-.logo-text .c2  { color: var(--pink); } /* i  – pink */
-.logo-text .c3  { color: var(--green); }/* g  – olive */
-.logo-text .c4  { color: #7a7a6a; }   /* e  – olive-gray */
-.logo-text .c5  { color: var(--gray); } /* n  – gray */
-.logo-text .c6  { color: #7a7a6a; }   /* e  – olive-gray */
-.logo-text .c7  { color: var(--green); }/* v  – olive */
-.logo-text .c8  { color: var(--pink); } /* i  – pink */
-.logo-text .c9  { color: #7a7a6a; }   /* e  – olive-gray */
-.logo-text .c10 { color: var(--gray); } /* r  – gray */
-.logo-text .l-at { color: var(--gray); font-weight: 300; }
+/* e·i·g·e·n·e·v·i·e·r  — farbtreue nach Original */
+.logo-text .c1  { color: #6e6e60; }   /* e */
+.logo-text .c2  { color: #e8007d; }   /* i – pink */
+.logo-text .c3  { color: #7e9600; }   /* g – olive */
+.logo-text .c4  { color: #6e6e60; }   /* e */
+.logo-text .c5  { color: #8a8a80; }   /* n */
+.logo-text .c6  { color: #6e6e60; }   /* e */
+.logo-text .c7  { color: #7e9600; }   /* v – olive */
+.logo-text .c8  { color: #e8007d; }   /* i – pink */
+.logo-text .c9  { color: #6e6e60; }   /* e */
+.logo-text .c10 { color: #8a8a80; }   /* r */
+.logo-text .l-at {
+  color: #9a9a8e;
+  font-weight: 300;
+  font-size: 28px;
+  letter-spacing: 0;
+}
 
 /* Headline pills */
 .headline {

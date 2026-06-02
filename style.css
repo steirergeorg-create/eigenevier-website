@@ -1,0 +1,637 @@
+:root {
+  --pink: #e8007d;
+  --green: #8db300;
+  --gray-dark: #444;
+  --gray: #666;
+  --gray-light: #999;
+  --sidebar-width: 360px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: var(--gray-dark);
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--pink);
+}
+
+/* ── Layout ── */
+.page {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  padding: 28px 30px;
+  position: relative;
+}
+
+.sidebar-logo {
+  margin-bottom: 36px;
+}
+
+.sidebar-logo .bautraeger {
+  font-size: 11px;
+  color: var(--gray-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.logo-text .l-e   { color: var(--pink); }
+.logo-text .l-i   { color: var(--green); }
+.logo-text .l-g   { color: var(--gray); }
+.logo-text .l-n   { color: var(--gray); }
+.logo-text .l-v   { color: var(--green); }
+.logo-text .l-r   { color: var(--gray); }
+.logo-text .l-at  { color: var(--gray); font-weight: 300; }
+
+/* Headline pills */
+.headline {
+  margin-bottom: 28px;
+}
+
+.headline-line {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  padding: 2px 10px;
+  margin-bottom: 6px;
+  line-height: 1.15;
+}
+
+.headline-line.pink  { background: var(--pink);  color: #fff; }
+.headline-line.green { background: var(--green); color: #fff; }
+
+/* Address box */
+.address-box {
+  border-left: 3px solid var(--gray-light);
+  border-right: 3px solid var(--gray-light);
+  padding: 8px 12px;
+  margin-bottom: 28px;
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Apartment list */
+.apt-list {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.apt-list li {
+  padding: 3px 0;
+  font-size: 12.5px;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.apt-list li a {
+  display: block;
+  padding: 2px 6px;
+}
+
+.apt-list li a:hover,
+.apt-list li.active a {
+  background: var(--pink);
+  color: #fff;
+}
+
+/* CTA button in sidebar */
+.sidebar-cta {
+  display: block;
+  border: 1px solid var(--gray-light);
+  padding: 18px 20px;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.4;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.sidebar-cta:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+/* ── Main area ── */
+.main {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #e0e0e0;
+}
+
+/* Top nav bar */
+.topnav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.topnav-col {
+  padding: 14px 18px;
+  border-right: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+
+.topnav-col:last-child {
+  border-right: none;
+}
+
+.topnav-col .col-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--gray-dark);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.topnav-col .col-links {
+  list-style: none;
+}
+
+.topnav-col .col-links li {
+  margin-bottom: 3px;
+}
+
+.topnav-col .col-links a {
+  color: var(--gray);
+  font-size: 12.5px;
+}
+
+.topnav-col .col-links a:hover {
+  color: var(--pink);
+}
+
+.topnav-col .col-links a.active {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  padding: 1px 7px;
+}
+
+/* Roman numeral section tabs */
+.roman-tabs {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 18px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.roman-tabs span {
+  font-size: 11px;
+  color: var(--gray-light);
+  padding: 6px 0;
+  letter-spacing: 0.1em;
+  border-bottom: 2px solid transparent;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  padding: 8px 20px;
+  font-size: 11.5px;
+  color: var(--gray-light);
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumb a {
+  color: var(--gray-light);
+}
+
+.breadcrumb a:hover,
+.breadcrumb span.current {
+  color: var(--pink);
+}
+
+.breadcrumb .sep {
+  margin: 0 5px;
+}
+
+/* Content area */
+.content {
+  padding: 20px 20px 40px;
+  flex: 1;
+}
+
+/* Project hero image */
+.project-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  background: #ddd;
+}
+
+.project-image-placeholder {
+  width: 100%;
+  height: 320px;
+  background: linear-gradient(135deg, #c8d8e8 0%, #a0b8c8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+.image-caption {
+  font-size: 11.5px;
+  color: var(--gray-light);
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+
+/* Section headings */
+.section-heading {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 4px 14px;
+  margin-bottom: 10px;
+}
+
+.section-heading.green {
+  background: var(--green);
+}
+
+/* Two-column content grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* Nahversorgung bars */
+.supply-bars {
+  margin-top: 10px;
+}
+
+.supply-row {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 4px;
+  height: 22px;
+}
+
+.supply-distance {
+  background: var(--pink);
+  color: #fff;
+  font-size: 11px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  min-width: 54px;
+}
+
+.supply-name {
+  background: #c8d080;
+  color: var(--gray-dark);
+  font-size: 11px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* Map placeholder */
+.map-placeholder {
+  width: 100%;
+  height: 160px;
+  background: #d4e4c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-size: 12px;
+  border: 1px solid #bcd4a0;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Umgebung photos */
+.umgebung-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.umgebung-photo {
+  height: 110px;
+  background: #c8c8c8;
+  overflow: hidden;
+}
+
+/* ── Apartments page ── */
+.apt-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.apt-img-wrap {
+  position: relative;
+}
+
+.apt-img-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #e8d0c0 0%, #c8b0a0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+}
+
+.apt-img-caption {
+  font-size: 11px;
+  color: var(--gray-light);
+  margin-top: 4px;
+}
+
+.apt-headline {
+  background: var(--pink);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 300;
+  padding: 8px 16px;
+  margin-bottom: 12px;
+}
+
+.apt-subtext {
+  font-size: 13px;
+  color: var(--gray-dark);
+  margin-bottom: 8px;
+}
+
+.apt-subtext strong {
+  font-weight: bold;
+}
+
+.apt-description {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--gray);
+  margin-bottom: 12px;
+}
+
+.apt-anfrage {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--gray-dark);
+  margin-bottom: 20px;
+}
+
+/* ── Apartment detail page ── */
+.floor-plan-img {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #f0e8d8 0%, #d8c8b0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.floor-plan-hint {
+  font-size: 11px;
+  color: var(--gray-light);
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+.apt-detail-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+.apt-detail-title {
+  background: var(--pink);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+}
+
+.apt-detail-tagline {
+  border: 1px solid #ccc;
+  border-left: none;
+  padding: 10px 18px;
+  font-size: 13px;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.apt-detail-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Specs table */
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.specs-table tr td {
+  padding: 4px 0;
+  font-size: 12.5px;
+}
+
+.specs-table .spec-label {
+  background: var(--gray);
+  color: #fff;
+  padding: 5px 10px;
+  width: 50%;
+}
+
+.specs-table .spec-value {
+  background: var(--green);
+  color: #fff;
+  padding: 5px 10px;
+  text-align: right;
+  width: 50%;
+}
+
+.apt-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--gray-dark);
+  margin-bottom: 16px;
+}
+
+.anfrage-btn {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 18px 20px;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--gray);
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.anfrage-btn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.pdf-links {
+  list-style: none;
+}
+
+.pdf-links li {
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.pdf-links li::before {
+  content: "📄 ";
+  font-size: 11px;
+}
+
+.pdf-links a {
+  color: var(--gray);
+}
+
+.pdf-links a:hover {
+  color: var(--pink);
+}
+
+/* ── Impressum ── */
+.impressum-content {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--gray);
+  max-width: 540px;
+}
+
+.impressum-content h3 {
+  color: var(--gray-dark);
+  font-size: 13px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.impressum-content p {
+  margin-bottom: 12px;
+}
+
+/* ── Login page ── */
+.login-form {
+  max-width: 300px;
+}
+
+.login-intro {
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 10px;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  border-color: var(--pink);
+}
+
+.login-forgot {
+  font-size: 12px;
+  color: var(--gray-light);
+  margin-top: 6px;
+}
+
+.login-forgot a {
+  color: var(--pink);
+}
+
+/* ── Sidebar contact info (Impressum/Login) ── */
+.sidebar-contact {
+  margin-top: 20px;
+}
+
+.sidebar-contact .sidebar-logo-small {
+  font-size: 14px;
+  color: var(--gray-light);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+}
+
+.sidebar-contact p {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.sidebar-contact .label {
+  color: var(--gray-light);
+}
+
+/* Sidebar map */
+.sidebar-map {
+  width: 100%;
+  height: 180px;
+  background: #d4e4c0;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-size: 12px;
+  border: 1px solid #bcd4a0;
+}

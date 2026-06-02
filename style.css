@@ -7,6 +7,8 @@
   --sidebar-width: 360px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +16,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
   font-size: 13px;
   color: var(--gray-dark);
   background: #fff;
@@ -54,18 +56,24 @@ a:hover {
 }
 
 .logo-text {
-  font-size: 28px;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 30px;
   font-weight: 300;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
 }
-.logo-text .l-e   { color: var(--pink); }
-.logo-text .l-i   { color: var(--green); }
-.logo-text .l-g   { color: var(--gray); }
-.logo-text .l-n   { color: var(--gray); }
-.logo-text .l-v   { color: var(--green); }
-.logo-text .l-r   { color: var(--gray); }
-.logo-text .l-at  { color: var(--gray); font-weight: 300; }
+/* e·i·g·e·n·e·v·i·e·r */
+.logo-text .c1  { color: #7a7a6a; }   /* e  – olive-gray */
+.logo-text .c2  { color: var(--pink); } /* i  – pink */
+.logo-text .c3  { color: var(--green); }/* g  – olive */
+.logo-text .c4  { color: #7a7a6a; }   /* e  – olive-gray */
+.logo-text .c5  { color: var(--gray); } /* n  – gray */
+.logo-text .c6  { color: #7a7a6a; }   /* e  – olive-gray */
+.logo-text .c7  { color: var(--green); }/* v  – olive */
+.logo-text .c8  { color: var(--pink); } /* i  – pink */
+.logo-text .c9  { color: #7a7a6a; }   /* e  – olive-gray */
+.logo-text .c10 { color: var(--gray); } /* r  – gray */
+.logo-text .l-at { color: var(--gray); font-weight: 300; }
 
 /* Headline pills */
 .headline {

@@ -1,2 +1,5 @@
 name = "eigenevier-website"
-pages_build_output_dir = "."
+compatibility_date = "2026-06-02"
+
+[assets]
+directory = "."
